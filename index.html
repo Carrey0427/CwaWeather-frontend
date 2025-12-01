@@ -580,8 +580,8 @@
 
         <!-- 中：主題切換 -->
         <div class="theme-switch">
-            <button id="btnTheme711" class="theme-btn active">711 風格</button>
-            <button id="btnThemeSlime" class="theme-btn">魔國聯邦風格</button>
+            <button id="btnTheme711" class="theme-btn active">模版</button>
+            <button id="btnThemeSlime" class="theme-btn">史萊姆風</button>
         </div>
 
         <!-- 右：更新時間 -->
@@ -616,7 +616,7 @@ const API_URL = "https://weather-nangang.zeabur.app/api/weather/kaohsiung";
 const Theme711 = (() => {
 
     /* --------------------------
-       天氣圖示（711 風格）
+       天氣圖示(教學模版）
     --------------------------- */
     function getWeatherIcon(weather) {
         if (!weather) return "🌤️";
@@ -629,7 +629,7 @@ const Theme711 = (() => {
     }
 
     /* --------------------------
-       建議（711 風格）
+       建議（教學模版）
     --------------------------- */
     function getAdvice(rainProb, maxTemp) {
         let rainIcon = "🌂";
@@ -998,7 +998,7 @@ function applyTheme(theme) {
 
     if (locationPill) {
         locationPill.textContent = 
-            theme === "711" ? "📍 臺北" : "📍 坦派斯特首都";
+            theme === "711" ? "📍 臺北" : "📍 坦派斯特";
     }
 
     if (sectionTitle) {
