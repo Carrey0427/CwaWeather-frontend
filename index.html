@@ -254,7 +254,7 @@
         /* 主題切換按鈕 */
         .theme-switch {
             display: flex;
-            flex-direction: column;   /* ← 讓按鈕上下排列 */
+            flex-direction: column !important;   /* ← 讓按鈕上下排列 */
             gap: 6px;
             justify-content: center;
             align-items: center;
@@ -279,6 +279,12 @@
             color: #2F4F4F;
             border-color: #fff;
         }
+        #updateTime {
+            display: block;
+            white-space: normal !important;
+            line-height: 1.2;
+        }
+
     </style>
     <style id="style-slime">
         /* ======================================= */
@@ -538,7 +544,7 @@
         /* === 主題切換按鈕（兩主題共用） === */
         .theme-switch {
             display: flex;
-            flex-direction: column;   /* ← 讓按鈕上下排列 */
+            flex-direction: column !important;   /* ← 讓按鈕上下排列 */
             gap: 6px;
             justify-content: center;
             align-items: center;
@@ -562,6 +568,11 @@
             background: #FFD700;
             color: #2F4F4F;
             border-color: #fff;
+        }
+        #updateTime {
+            display: block;
+            white-space: normal !important;
+            line-height: 1.2;
         }
     </style>
 <body data-theme="711">
