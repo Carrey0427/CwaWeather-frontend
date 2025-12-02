@@ -254,6 +254,7 @@
         /* 主題切換按鈕 */
         .theme-switch {
             display: flex;
+            flex-direction: column;   /* ← 讓按鈕上下排列 */
             gap: 6px;
             justify-content: center;
             align-items: center;
@@ -537,6 +538,7 @@
         /* === 主題切換按鈕（兩主題共用） === */
         .theme-switch {
             display: flex;
+            flex-direction: column;   /* ← 讓按鈕上下排列 */
             gap: 6px;
             justify-content: center;
             align-items: center;
@@ -852,7 +854,7 @@ const ThemeSlime = (() => {
         const days = ["魔週日","魔週一","魔週二","魔週三","魔週四","魔週五","魔週六"];
         const dow = days[now.getDay()];
 
-        return `魔月${month}日${date} ${dow}`;
+        return `魔月${month}日${date}<br>${dow}`;
     }
 
 
@@ -927,7 +929,7 @@ const ThemeSlime = (() => {
             `;
         });
 
-        document.getElementById("updateTime").textContent = formatUpdateTime();
+        document.getElementById("updateTime").innerHTML = formatUpdateTime();
     }
 
 
@@ -1012,7 +1014,7 @@ function applyTheme(theme) {
     document.getElementById("loading").style.display = "flex";
     document.getElementById("mainContent").style.display = "none";
 
-    document.getElementById("updateTime").textContent = "更新中...";
+    document.getElementById("updateTime").innerHTML = "更新中...";
 
     /* 呼叫主題專屬 fetchWeather */
     if (theme === "711") {
