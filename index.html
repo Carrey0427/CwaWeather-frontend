@@ -251,6 +251,26 @@
             z-index: 999;
         }
 
+        /* 依主題切換 Loading 內容（711 / Slime） */
+        body[data-theme="711"] .loading-711 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        body[data-theme="711"] .loading-slime {
+            display: none;
+        }
+
+        body[data-theme="slime"] .loading-711 {
+            display: none;
+        }
+        body[data-theme="slime"] .loading-slime {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+
         /* 主題切換按鈕 */
         .theme-switch {
             display: flex;
@@ -505,6 +525,26 @@
             margin: 5px 0;
         }
 
+        /* 依主題切換 Loading 內容（711 / Slime） */
+        body[data-theme="711"] .loading-711 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        body[data-theme="711"] .loading-slime {
+            display: none;
+        }
+
+        body[data-theme="slime"] .loading-711 {
+            display: none;
+        }
+        body[data-theme="slime"] .loading-slime {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+
         .mini-temp {
             font-size: 1.3rem;
             font-weight: 800;
@@ -579,11 +619,26 @@
 
     <!-- Loading 畫面 -->
     <div id="loading" class="loading-screen">
-        <div style="font-size: 4rem; animation: bounce 2s infinite;">☁️</div>
-        <p style="color: white; font-weight: bold; margin-top: 20px;">
-            正在觀測雲的流動...
-        </p>
+
+        <!-- 711 風格的 Loading（雲朵版） -->
+        <div class="loading-711">
+            <div style="font-size: 4rem; animation: bounce 2s infinite;">☁️</div>
+            <p style="color: white; font-weight: bold; margin-top: 20px;">
+                正在觀測雲的流動...
+            </p>
+        </div>
+
+        <!-- Slime 風格的 Loading（史萊姆版） -->
+        <div class="loading-slime">
+            <!-- 這個 slime-loader 會用你 style-slime 裡的 @keyframes slime-loading -->
+            <div class="slime-loader">💧</div>
+            <p style="color: white; font-weight: bold; margin-top: 20px;">
+                『智慧之王』正在解析魔力流向...
+            </p>
+        </div>
+
     </div>
+
 
     <!-- 頂部狀態列 -->
     <div class="status-bar">
