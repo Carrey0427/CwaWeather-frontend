@@ -418,6 +418,16 @@
             50% { transform: scale(1.05); }
         }
 
+        /* 史萊姆 Loading Q 彈動畫 */
+        @keyframes slime-loading {
+            0%   { transform: translateY(0) scale(1); opacity: 1; }
+            25%  { transform: translateY(-10px) scale(1.05); opacity: 0.85; }
+            50%  { transform: translateY(0) scale(1); opacity: 1; }
+            75%  { transform: translateY(5px) scale(0.98); opacity: 0.9; }
+            100% { transform: translateY(0) scale(1); opacity: 1; }
+        }
+
+
         .hero-icon {
             font-size: 5rem;
             filter: drop-shadow(0 4px 0 rgba(0, 0, 0, 0.2));
@@ -525,6 +535,15 @@
             margin: 5px 0;
         }
 
+        /* Slime 風格 Loading 小圖設定 */
+        .slime-loader {
+            font-size: 4rem;
+            color: var(--slime-blue);
+            text-shadow: 0 0 10px rgba(79, 181, 217, 0.8);
+            animation: slime-loading 1.5s infinite ease-in-out;
+        }
+
+
         /* 依主題切換 Loading 內容（711 / Slime） */
         body[data-theme="711"] .loading-711 {
             display: flex;
@@ -614,6 +633,11 @@
             white-space: normal !important;
             line-height: 1.2;
         }
+        /* Slime 主題的 loading 背景 */
+        body[data-theme="slime"] #loading.loading-screen {
+            background: var(--forest-green);
+        }
+
     </style>
 <body data-theme="711">
 
